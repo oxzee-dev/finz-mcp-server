@@ -267,4 +267,5 @@ def get_sec_filings(symbol: str) -> dict:
 # Entry point
 # ─────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    mcp.run()
+    # mcp.run() # For Local run
+    mcp.run(transport="sse", host="0.0.0.0", port=8000) # for HTTP SSE
