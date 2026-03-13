@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: finz-mcp
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    envVars:
+      - key: PORT
+        generateValue: false   # Render injects PORT automatically
+    autoDeploy: true           # redeploys on every git push
